@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Be My Valentine 💘</title>
+  <title>Just For You 💘</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       background: linear-gradient(135deg, #ff9a9e, #fad0c4);
       display: flex;
       align-items: center;
@@ -20,11 +20,8 @@
       padding: 40px;
       border-radius: 20px;
       width: 90%;
-      max-width: 400px;
+      max-width: 420px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    }
-    h1 {
-      margin-bottom: 20px;
     }
     button {
       background: #fff;
@@ -43,53 +40,49 @@
     .hidden {
       display: none;
     }
-    .heart {
-      font-size: 30px;
-      animation: float 2s infinite;
-    }
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
-    }
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <div id="step1">
-      <h1>Will you be my Valentine? 💌</h1>
-      <button onclick="nextStep('step2')">Yes 💖</button>
-      <button onclick="nextStep('step2')">Obviously 😘</button>
-    </div>
+<div class="card">
 
-    <div id="step2" class="hidden">
-      <h1>How excited are you? 😍</h1>
-      <button onclick="nextStep('step3')">Very 🥰</button>
-      <button onclick="nextStep('step3')">EXTREMELY ❤️</button>
-    </div>
-
-    <div id="step3" class="hidden">
-      <h1>What are we doing on Valentine’s Day? 🌹</h1>
-      <button onclick="nextStep('step4')">Dinner 🍽️</button>
-      <button onclick="nextStep('step4')">Surprise me 🎁</button>
-    </div>
-
-    <div id="step4" class="hidden">
-      <h1>You’re officially my Valentine 💘</h1>
-      <p class="heart">❤️ ❤️ ❤️</p>
-      <p>I can’t wait to spend it with you.</p>
-    </div>
+  <!-- STEP 1 -->
+  <div id="step1">
+    <h1>Hi janu! Do you still love me?</h1>
+    <button onclick="go('step2')">Yes meri jaan. I always will</button>
+    <button onclick="go('step2')">Ofcourse my future wife</button>
   </div>
 
-  <script>
-    function nextStep(stepId) {
-      document.querySelectorAll('.card > div').forEach(div => {
-        div.classList.add('hidden');
-      });
-      document.getElementById(stepId).classList.remove('hidden');
-    }
-  </script>
+  <!-- STEP 2 -->
+  <div id="step2" class="hidden">
+    <h1>Do you have any plans for Valentine?</h1>
+    <button onclick="go('step3')">dw jaan, I will surprise you</button>
+    <button onclick="go('step3')">I have it all planned for you janu</button>
+  </div>
+
+  <!-- STEP 3 -->
+  <div id="step3" class="hidden">
+    <h1>When are you gonna ask me to be your valentine?</h1>
+    <button onclick="go('step4')">Soon my baby, will flowers and ferrero rocher in my hand</button>
+    <button onclick="go('step4')">I'll take you out for dinner and then ask you about this with flowers</button>
+  </div>
+
+  <!-- STEP 4 (FINAL) -->
+  <div id="step4" class="hidden">
+    <h1>Yayyyyyy!!!! Muahhhhhhhh</h1>
+    <p>YOU HAVE WON IN THIS LIFE AND AFTERLIFE AFTER GETTING A GIRL LIKE ME 🥰</p>
+  </div>
+
+</div>
+
+<script>
+  function go(stepId) {
+    document.querySelectorAll('.card > div').forEach(div => {
+      div.classList.add('hidden');
+    });
+    document.getElementById(stepId).classList.remove('hidden');
+  }
+</script>
 
 </body>
 </html>
